@@ -1,0 +1,16 @@
+{
+	"name": "RTH Toolbox",
+	"short_name": "Toolbox",
+	"icons": [{
+		"src": "https://img1.picloli-1.xyz/2021/01/21/icon-192.png",
+		"type": "image/png",
+		"sizes": "192x192"
+	},{
+		"src": "https://img1.picloli-1.xyz/2021/01/21/icon-512.png",
+		"type": "image/png",
+		"sizes": "512x512"
+	}],
+	"start_url": "./",
+	"display": "standalone",
+	"theme_color": "#0066cc"
+}
