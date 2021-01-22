@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>CPS测试</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static\cps\bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static\cps\cover.css" rel="stylesheet">
+    <link href="static\cps\scroll.css" rel="stylesheet">
+    <script src="static\cps\jquery.min.js"></script>
+    <script src="static\cps\click.js"></script>
+    <script>
+        function homeb() {
+            document.getElementById("home").style = "display: inline-block;height: 70vh;overflow: auto;";
+            document.getElementById("mark").style = "display: none;";
+            document.getElementById("about").style = "display: none;";
+            document.getElementById("shouye").className = "active";
+            document.getElementById("jilu").className = "";
+            document.getElementById("shuoming").className = "";
+        }
+
+        function markb() {
+            document.getElementById("home").style = "display: none;";
+            document.getElementById("mark").style = "display: inline;";
+            document.getElementById("about").style = "display: none;";
+            document.getElementById("jilu").className = "active";
+            document.getElementById("shouye").className = "";
+            document.getElementById("shuoming").className = "";
+        }
+
+        function aboutb() {
+            document.getElementById("home").style = "display: none;";
+            document.getElementById("mark").style = "display: none;";
+            document.getElementById("about").style = "display: inline;";
+            document.getElementById("shuoming").className = "active";
+            document.getElementById("shouye").className = "";
+            document.getElementById("jilu").className = "";
+        }
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?b2d9078087594c79ccf9169ba52d0033";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <style>
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+
+        .btn-circle.btn-lg {
+            width: 20vh;
+            height: 20vh;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 100px;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .plarge {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">CPS测试</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li class="active" id="shouye"><a style="cursor: pointer;" onclick="homeb()">首页</a></li>
+                               
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover" style="display: inline-block;height: 70vh;overflow: auto;" id="home">
+                    <h1 class="cover-heading">在线CPS测试</h1>
+                    <p class="lead">第一次点击后开始计时</p>
+                    <p class="lead">
+                        <button id="click" class="btn btn-lg btn-default btn-circle" type="button">点我</button>
+                    </p>
+                    <p class="plarge"><span id="time">0.00</span>s</p>
+                    <p class="plarge">你点击了：<span id="clicktimes">0</span>次</p>
+                    <p class="plarge">你的CPS：<span id="cps">0.0</span></p>
+                    <button id="again" class="btn btn-default" type="button" style="display: none;">重新开始</button><br><br><br>
+                </div>
+
+                <div class="inner cover" style="display: none;" id="mark">
+                    <table class="table table-hover table-bordered table-responsive">
+                        <caption style="color: white;">你的CPS纪录</caption>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>CPS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="playresult">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="inner cover" style="display: none;" id="about">
+                    CPS测试
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   
+    <script src="static\cps\jquery.min1.js"></script>
+    <script src="static\cps\bootstrap.min.js"></script>
+
+</body>
+
+</html>
