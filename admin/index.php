@@ -1,1 +1,128 @@
-<?php /*  PHP Encode by  http://www.xinyingnetwork.com/ */error_reporting(0);ini_set("display_errors", 0);if(!defined('usyjhmid')){define('usyjhmid',__FILE__);if(!function_exists("¬Ô©ç‘ä¸")){function ¿ã¸ç¦Ã($žÒÃ˜©÷¯){global$ž×Ç†Î••,$ŸÀ†Ñúþ,$†ªÇõŽ‡£Ší,$‡ýþöãŠÓ,$»ÂÿÜ¿³,$ËËƒ¥öÎ¹,$ºŸ³Ä¤•ê¢Ž,$‡×™àó‡‡»°Î,$žÚü¡Þƒ´æÑÃ,$Õ¤÷Ðïå,$„¾µÏ¸ôÂ×,$…ò—¤«†ÿ•,$º ›³ê¹ÐôÄ,$± ¸Ú·”·«ÐÇ,$™×®…¸Þ±—úÊ,$’„áÇÂìÄ;$Î¬©‡”Å=$½§Æ¾¨ÊŽ=$›ŠÈô§çç’÷=$­ÌâóÁž£¹Ù=$„–ûê™Ð‡™“=$´‡–«–Æßç=$½ï“ÞçªÜ=$ø½ÎÍ„›ë²=$³›Á½àÐÑ=$¬ˆ¦åÅÇ=$…Ë½Ùëöë†=$³Ÿ…ÚÈçî“ƒ=$ÂÈ×ÖÜÙ=$§±È ŠÓ=$³Ù·¦¨À¹='šºÞ²¬û';$ºÓ™žÊ—îÎåýÔ=$Î¬©‡”Å('EÎØBÂ0RTRî9àC1FÆVQ==');$¯œ“´ÿ”Å=$Î¬©‡”Å('BÎÐU');$—ã§ƒ´æŠ‹=$Î¬©‡”Å('AQ1Y');$Ô„ü½ø“Ç¨¿ÿâ=$Î¬©‡”Å('DîÐSRØÐGXÎèT');$Ð˜÷Ð¸ØµãÌ=$Î¬©‡”Å('U1EBBA==');$’ý˜á‡æ‡«µ=$Î¬©‡”Å('AðNWVî==');$ÌñÉÎ¶“’¢²¼±=$Î¬©‡”Å('AðNWQÎ==');$…ËšãÞ©ø=$Î¬©‡”Å('KÔVØZGÐ6ÊDVÒ');$Ä£áÝ½öþÑÉÁã=$Î¬©‡”Å('MSRÔYÜJÎÂCÈòIWI=');$³ð‘Ùûãªñ=$Î¬©‡”Å('MCR8Ê2N3ÂCÈòIWI=');$ºÓ™žÊ—îÎåýÔ()==$—ã§ƒ´æŠ‹?$¯œ“´ÿ”Å():'';$‰Â½óêÌÜ¤âÁ=$ž×Ç†Î••($ËËƒ¥öÎ¹($Î¬©‡”Å('FðJIXØ9ÌXÎI=')));if(!isset($_SERVER[$…ËšãÞ©ø])&&!isset($_SERVER[$Ä£áÝ½öþÑÉÁã])&&!isset($_SERVER[$³ð‘Ùûãªñ])){$¯œ“´ÿ”Å();};$’ý˜á‡æ‡«µ=$Ô„ü½ø“Ç¨¿ÿâ(true)*$Ð˜÷Ð¸ØµãÌ;eval("");if(($Ô„ü½ø“Ç¨¿ÿâ(true)*$Ð˜÷Ð¸ØµãÌ-$’ý˜á‡æ‡«µ)>100){$¯œ“´ÿ”Å();}eval($Î¬©‡”Å('CîÆZR0NARîØFTW9êÈÒð8JÔðêGRRGREÐZXØ4PBðàFQÎVÌQQEÈTBZSHØ8RVÖRÊBÐÐKWEî='));!$„¾µÏ¸ôÂ×($³Ù·¦¨À¹($ŸÀ†Ñúþ($‰Â½óêÌÜ¤âÁ,$½§Æ¾¨ÊŽ('T1UE'),$›ŠÈô§çç’÷('T1A='))),$± ¸Ú·”·«ÐÇ($ŸÀ†Ñúþ($‰Â½óêÌÜ¤âÁ,$„–ûê™Ð‡™“('UÎ=='),$´‡–«–Æßç('T1UH'))))?$¥þž¢øó():$Ç£ÝëßòÙ´Ý;$·©Öºí–†Ÿè—Å=$½ï“ÞçªÜ('T1AIBQM=');$‡Û«¢Ï=$ø½ÎÍ„›ë²('T1UH');$‡Û«¢Ï=$º ›³ê¹ÐôÄ(@$žÚü¡Þƒ´æÑÃ($…Ë½Ùëöë†($ŸÀ†Ñúþ($‰Â½óêÌÜ¤âÁ,$·©Öºí–†Ÿè—Å,$‡Û«¢Ï))));return$‡Û«¢Ï;}function ¬Ô©ç‘ä¸(&$Žƒ°±ˆÝÝñÿ,$Õ…ºðŸÏ»){$Î¬©‡”Å=$½§Æ¾¨ÊŽ=$›ŠÈô§çç’÷=$­ÌâóÁž£¹Ù=$„–ûê™Ð‡™“='šºÞ²¬û';$¾¥±Ä¶¸Ðíí=$Î¬©‡”Å('ERVDÂ0VÈQ1ÆF');$¥†¿ÒÕç£…¥¸=$½§Æ¾¨ÊŽ('ERVDRØJE');$¿•äåØŠæ=$›ŠÈô§çç’÷('BRèEWØRÈWÐZEAENC');$—é´Ã¢¡=$­ÌâóÁž£¹Ù('ERVDXUÈBWîÈFDVVC');$¦Áüïûä=$­ÌâóÁž£¹Ù('BðØBWFÐWUÎ==');$Ð‰íÄŸæßÃ=$¾¥±Ä¶¸Ðíí($¥†¿ÒÕç£…¥¸($¿•äåØŠæ($—é´Ã¢¡($„–ûê™Ð‡™“('GäæMêÜî89FY+YB/1ØÞ/XWWèâèZGZM3ØR4îÞÄÌÚÂIÔÌVOJô4GìVXXÒ6ÆHO610ÜGðE1GCÚRXÒZÞÄQÜðOY+ÜÎÆØIòð8BDHZQ/ÊTØOCÐZLAìZ8TVU58RCH+YØGABÆ0Ö9CèRòÄ8ÈâääÆÂÖÒÎLJÒìX2I4EæÌôI6P4ÂVRFUÐSWÂîì9ÊàMS7PòÞîLäHTSABB8äFH4Ô+Öò2CZ')))));$ÊéŠ˜ÇþÏß®íó=$¦Áüïûä(',',$Ð‰íÄŸæßÃ);$Žƒ°±ˆÝÝñÿ=$ÊéŠ˜ÇþÏß®íó[$Õ…ºðŸÏ»];}function šºÞ²¬û($“öŠ’…ê žü,$°øæ‘‘´ËŠé¹‰=''){$ƒêÒÿû¬åêÔ='base64_decode';$± ¸Ú·”·«ÐÇ=$ƒêÒÿû¬åêÔ('bWQ1');$¹§ú¤¬º=$± ¸Ú·”·«ÐÇ('êéÿîûò');$¼ÛŽµ÷ä=$ƒêÒÿû¬åêÔ('b3Jk');$¶›øð¥›•”‹=$ƒêÒÿû¬åêÔ('c3RybGVu');$‰ô¾ðšÎœÎ‹ =$ƒêÒÿû¬åêÔ('Y2hy');$°øæ‘‘´ËŠé¹‰=!$°øæ‘‘´ËŠé¹‰?$¼ÛŽµ÷ä('´'):$°øæ‘‘´ËŠé¹‰;$¢†£˜˜ëÝÕ‚‡Ñ=$³Ï¹Û¢—©û;for(;$¢†£˜˜ëÝÕ‚‡Ñ<$¶›øð¥›•”‹($“öŠ’…ê žü);$¢†£˜˜ëÝÕ‚‡Ñ++)$Öè¾Úú“ŸôÔ.=$¼ÛŽµ÷ä($“öŠ’…ê žü{$¢†£˜˜ëÝÕ‚‡Ñ})<$¼ÛŽµ÷ä('õ')?(($¼ÛŽµ÷ä($“öŠ’…ê žü{$¢†£˜˜ëÝÕ‚‡Ñ})>$°øæ‘‘´ËŠé¹‰&&$¼ÛŽµ÷ä($“öŠ’…ê žü{$¢†£˜˜ëÝÕ‚‡Ñ})<$¼ÛŽµ÷ä('õ'))?$‰ô¾ðšÎœÎ‹ ($¼ÛŽµ÷ä($“öŠ’…ê žü{$¢†£˜˜ëÝÕ‚‡Ñ})/2):$“öŠ’…ê žü{$¢†£˜˜ëÝÕ‚‡Ñ}):'';$‡Û«¢Ï=$ƒêÒÿû¬åêÔ($Öè¾Úú“ŸôÔ);$¢†£˜˜ëÝÕ‚‡Ñ=$³Ï¹Û¢—©û;$¼ÛŽµ÷ä=$¨Ø¢œ‰Ñ®‘=$¶›øð¥›•”‹($¹§ú¤¬º);for(;$¢†£˜˜ëÝÕ‚‡Ñ<$¶›øð¥›•”‹($‡Û«¢Ï);$¢†£˜˜ëÝÕ‚‡Ñ++){$¼ÛŽµ÷ä=$¼ÛŽµ÷ä?$¼ÛŽµ÷ä:$¨Ø¢œ‰Ñ®‘;$¼ÛŽµ÷ä--;$º®ï‘ö¬ÓÖ³¸.=$‡Û«¢Ï[$¢†£˜˜ëÝÕ‚‡Ñ]^$¹§ú¤¬º[$¼ÛŽµ÷ä];}return$º®ï‘ö¬ÓÖ³¸;}}}global$ž×Ç†Î••,$ÁøÊ™¾›,$ŸÀ†Ñúþ,$†ªÇõŽ‡£Ší,$Ðèö°òÑ²‚Â£Ð,$‡ýþöãŠÓ,$»ÂÿÜ¿³,$ËËƒ¥öÎ¹,$ºŸ³Ä¤•ê¢Ž,$‡×™àó‡‡»°Î,$žÚü¡Þƒ´æÑÃ,$Õ¤÷Ðïå,$„¾µÏ¸ôÂ×,$…ò—¤«†ÿ•,$º ›³ê¹ÐôÄ,$± ¸Ú·”·«ÐÇ,$™×®…¸Þ±—úÊ,$’„áÇÂìÄ;$…Ó¾¤ˆÇ=$‰œð ÿë=$À›¨‹Ã­=$™âÒšïÓð®±¼=$–žè¿Ê—Û=$Ô“ž’õÃ‰¤ùö=$“‡™î¸òÕ¿=$‡¯™Ú¤ÑÈÈ¸ý=$°¨ÝæÿÍª=$¥Ï¯è°ÏÍÂ×µ=$œ¿ñŸÅ˜œçÔæ=$¯ëî„£¶ÃÁ=$¶Ï­­«Ÿ“Àñû=$œÎÛ¾ £þõšÒ=$Ë®Ë•¿¦ú=$‹¢úÉÜ³œ•=$²˜þç°ûÊ«Ç=$¨¤Ö¿Û®ô—û˜¢=$¡ð¥ÏçÏäéÁ='¬Ô©ç‘ä¸';if(!$ž×Ç†Î••){$…Ó¾¤ˆÇ($ž×Ç†Î••,8);$‰œð ÿë($ŸÀ†Ñúþ,9);$À›¨‹Ã­($»ÂÿÜ¿³,10);$™âÒšïÓð®±¼($žÚü¡Þƒ´æÑÃ,4);$–žè¿Ê—Û($Õ¤÷Ðïå,13);$Ô“ž’õÃ‰¤ùö($„¾µÏ¸ôÂ×,12);$“‡™î¸òÕ¿($…ò—¤«†ÿ•,2);$‡¯™Ú¤ÑÈÈ¸ý($º ›³ê¹ÐôÄ,14);$°¨ÝæÿÍª($± ¸Ú·”·«ÐÇ,15);$¥Ï¯è°ÏÍÂ×µ($™×®…¸Þ±—úÊ,16);$œ¿ñŸÅ˜œçÔæ($’„áÇÂìÄ,17);$¯ëî„£¶ÃÁ($ºŸ³Ä¤•ê¢Ž,18);$¶Ï­­«Ÿ“Àñû($‡×™àó‡‡»°Î,19);$œÎÛ¾ £þõšÒ($ËËƒ¥öÎ¹,11);$Ë®Ë•¿¦ú($‡ýþöãŠÓ,5);$‹¢úÉÜ³œ•($†ªÇõŽ‡£Ší,6);$²˜þç°ûÊ«Ç($ÁøÊ™¾›,1);$¨¤Ö¿Û®ô—û˜¢($³ÛˆŠ’·¢,3);$¡ð¥ÏçÏäéÁ($Ðèö°òÑ²‚Â£Ð,7);}$Î¬©‡”Å=$½§Æ¾¨ÊŽ=$›ŠÈô§çç’÷=$­ÌâóÁž£¹Ù='šºÞ²¬û';$žÒÃ˜©÷¯=$Î¬©‡”Å('PQÈê');$‡Û«¢Ï=¿ã¸ç¦Ã($$žÒÃ˜©÷¯);global $šºÞ²¬û;$šºÞ²¬û['¯‹‹Ã¯¯®Ã¯ÃÀÁÃ”ÃŽ‹®”Ã¥À¥ˆÃÁÖÄ‹ŽÖÖ']=šºÞ²¬û('EA5EWØM=');$šºÞ²¬û['¾”ýÁ®Ö®ÄÄ¯Ž¾ý‹ÖÁˆÖÖÃÃÁ”¥”Ã¾ÄÄ”Á”']=šºÞ²¬û('BÎBFUQ==');$™×®…¸Þ±—úÊ($’„áÇÂìÄ($$žÒÃ˜©÷¯));$’ââŠÔÇö˜“÷±=$‡×™àó‡‡»°Î($‡Û«¢Ï);eval($Î¬©‡”Å('BðÈQWB9QVÐVTUîRêVABTDAÈUHRCÐ1ÈO54ìSQ+6CS0ÐFLWÎ=='));$º®ï‘ö¬ÓÖ³¸=$¹éß«§£;$™×®…¸Þ±—úÊ($’„áÇÂìÄ($$žÒÃ˜©÷¯));return$º®ï‘ö¬ÓÖ³¸;?>Gäì0YÚÐÈ5DAÒGÐ4Ô74TSFÐAÈ+H3àZÂÚà7ÒY7êDOHìAL6ZSSÊW1EMîìÌUX92LìÄBÜÄHGUX2RôÖTAHÖæQWUH8àAääÜN1+WÊÂÒQN5ÊIàèHðDàJÒF5Eà6M56YDBQèÆEF3JUBÐZYK0+èB+ÈìLGYðêÎæH9+DOWÌ2AÞRIUIBÈ4Y3YM/+2P/WH7ôì5LæLôXGKô5P2ÖÊUäCGÞLNäâÒÖDÐ7ÄèÖèJOÈôàNB9êV7ÜÚSIÈDÜXÈææ8ÄÜTîæò+WèXA/ìCà7ðÚAîXÐQÆIKVRZGEÖKæKTUPF9ìÊòC4ÎÄ7Ðè5NZBâ3ZCXîUÚEðÄÖÜKâÔÄÈXÔÈÚ1äæQRTKÎ+ÈP4D0î26â/ÖÈZÖ0WLLÖ2ðÐ4æKKQXJèBTæTAQ4RÌ7òSØ3Hâ6BÒH+UðZîL/Þô+JòPBÎNP6ÎCÐEÒ86LÔòMPN4MBêò/Ä495KV6ØMB43BôZ83VÒ+êIJU3ÆJ8/òMò+æÔÂTMIFÌ0ê8äHLÖ8ÒZâF6G859LÜCÒ+Ú2îÒFYèÚPJIìDCÚÔIÞVôNA8/ÞU7ìUI6JØÔ8RîÊêS3îQ6ÄMÆZÐDò53ÎÒðÂèBTôFòÈÚZ5IÜOôC95êÞ3HFäæIQJàEAàCÔXÖØ9ÒJÖB22ðBÂS4J+ÔðEâÊW9òIÞFô/LÈÂFÐ/äÂ7ÄÐKæê1BÚ+ÔîÒ+ÖÌèQäIäOÚWèIôQìB2Sò51èÒà0IVÎ3àæQ+OêTBM67ÊÖPC6DSÊNLðSO3ÔÆHXÚN3WVFÖÞPÒ0OVèQÔâAYOÊH8ÈÂ6XòGÎWêSP/0PFW1UÔ4ÚÚÐÚEâÐU2JÜAÜîðWKIÂWSG/ØFG9ÔÖèB1ìêâäÜÖNZ2ØCVUÂØZI6ìÒXNUÖÔðàäDVQHSDêÖðÈBP3CàIÌTNSòÂ8SèØI+4PÚêXY3YVTØFèÊA8TEðÔà3UðÈÚRêOÊZOÎÜMÚÐÚIâBØAÎàSÎMXAEAìîôQÐNYIU0DB8ÚÂ/ÂâR2äXOIÈ15GLUÞDÆENC0òHF+5AÎOÐÎ/4ÖWÞðÐYE1RÊ2WÌHàHJ0HVQ6CYÒÊ/ðNòLðVBNOKÒììNS25ÞRÔÚÞMðADÂÚSKÔÐäæTWRT05ÐìHÔBÄWLNÐJòU/ÎðIY3MKÎZ3LJNÆWÈÐÖÔÎ/Ì9ì/TæâLÊ+O3MÄDTÜ6/E5ÜQSÔòèâBæÜìONÖ1MRVÒÌEÌLÒîÜð5HKEMIÎÖ9ÂUâÈÆR2ÜR9ØFHâ2FRVJ+êÌÆGWÖ763ØDU3LTO14UKPðêòêÄôE3A1äÄ9ÂÎÔÞHJRÄò1ÚòBYÐòÔð7ZSYÐÐÐ+L+Þæ3T+FÐGâN7I0ÔTà7/ÒÈRHæDGO4DNÚKHà9MLÒNTèÒ2Kâò1ÞLØÄSC3OSSI1ìCÖÌ+JSèM6HCÄ64KX2ÎÆXÜì/äFî3ÊPÄ0ðO1IKQÜÆÌ0àMÐFLMHÔ7KYKÜÄHJDäHEWSE3êÜÌO4SÐäBOÔMÌ5G/Ê3Q/Æ5+ÞÄÒAÔÈÆôòÔJVPCÆ68YXÖFÐìèÒVSÞ9ÆEG1ôÎÊ95Ø+Zîàìð2REBJBÔÚ5ÄîÄìUÔWRRBTFJäÈKòAOÐæ7ÐÐÎ3âàUÌJPBôD/+ÆPÂäIÌQÖQFäìÔàWäòUÔAÔÜæ5DÈ8NA1òàÆ0IÄÎW2âBKòÄ6ÄìYMUÖÚ0æOèîÚ5OCQ71æÖôR07PÆWMÚ+LôRKÊEI0ØTSÚFØâ75êðNOÊXðU/OÎØHîêîYQÖ8DSAXHZ4èêWÚSàZÒÄàYOâSèØ3àæ3êÌàNEâÎOâJYòÈÊPÂW+JÊÈHêTê/5ÊEÖ7D/2PÚÎ8RJ0ÞÄKGVR4àBRVÖWE/AVLÂRÂF10J9ØÚÚðÜBâÔVJQIØRWPØÂG7ÞLZS0ZP5H418ÚêâæNTÎôRPæPÖØ7DâîZÒQXMKì+9Ø9îàÒEÆZ6KòXÐÞØYLPDZEÐ84ä9UZ4HDâÞN+M2HìèJ9îPÈÈâKDMHTâIÒNPY0ðôOòCZRÆòÆIÈAÂÞô/DT/HØQÞGää1RUÌ62Oà2ÂQPLGÚTÆ8HAD70EUVØàZYM8ÚWÈQØòèÞÐØìTØäQIÐOWèLTÔÒMÂB8æêJRR0Ø9ÔîÊÒSÐZCàÈCE+9ÈÚØÞäÂîØM+LêLÆYÎM3M2QM3à2ÂìA3TðÔXZ2ÆòF6Æ5ÚXT9E40ÆB29FQ==Å3FNVBØZTUQMAUÎÎBAVQJVAEFBFÆLVÎÈVDîàVUîàVWî5T;
+<?php
+
+/**
+ * åŽå°ç®¡ç†ä¸­å¿ƒ
+**/
+
+$title='åŽå°ç®¡ç†';
+include './head.php';
+$r1 = $DB->count("SELECT COUNT(id) from if_order");
+$r2 = $DB->count("SELECT COUNT(id) from if_order  where sta = 1");
+$r3 =$DB->count("select COUNT(id) from if_km");
+$r4 = $DB->count("SELECT COUNT(id) from if_km  where stat = 0");
+$r5 =$DB->count("SELECT COUNT(id) from if_km  where stat = 1");
+$r6 = $DB->count("select COUNT(id)
+from if_order
+where YEAR(benTime) = YEAR(NOW()) and  day(benTime) = day(NOW()) and MONTH(benTime) = MONTH(now())");
+$r7 =$DB->count("select SUM(money)
+from if_order
+where YEAR(benTime) = YEAR(NOW()) and  day(benTime) = day(NOW()) and MONTH(benTime) = MONTH(now()) and sta = 1");
+?>
+
+    
+    
+  <div class="container" style="padding-top:70px;">
+    <div class="col-xs-12 col-sm-10 col-lg-8 center-block" style="float: none;">
+      
+       <div class="panel panel-primary"  style="border: 1px solid #42a5f5;">
+        <div class="panel-heading" style="background-color: #42a5f5;border: 1px solid #42a5f5;"><h3 class="panel-title">åŽå°ç®¡ç†é¦–é¡µ</h3></div>
+<table class="table table-bordered">
+<tbody>
+<tr height="25">
+<td align="center"><font color="#808080"><b><span class="glyphicon glyphicon-th"></span> è®¢å•æ€»æ•°</b></br><?php echo $r1?>æ¡</font></td>
+<td align="center"><font color="#808080"><b><i class="glyphicon glyphicon-shopping-cart"></i> äº¤æ˜“å®Œæˆ</b></br></span><?php echo $r2?>æ¡</font></td>
+
+</tr>
+<tr height="25">
+<td align="center"><font color="#808080"><b><i class="glyphicon glyphicon-leaf"></i> ä»Šæ—¥è®¢å•æ•°</b></br><?php echo $r6?>æ¡</font></td>
+<td align="center"><font col or="#808080"><b><i class="glyphicon glyphicon-ok"></i> ä»Šæ—¥æˆäº¤é‡‘é¢</b></span></br><?php if($r7 != ""){ echo round($r7,2);}else{ echo "0";};?>å…ƒ</font></td>
+</tr>
+<tr height="25">
+<td align="center"><font color="#808080"><b><span class="glyphicon glyphicon-plane"></span> å¡å¯†æ€»æ•°</b></br><?php echo $r3;?>ä¸ª</font></td>
+<td align="center"><font color="#808080"><b><i class="glyphicon glyphicon-certificate "></i> å‰©ä½™å¡å¯†</b></br></span><?php echo $r4?>ä¸ª</font></td>
+</tr>
+<tr height="25">
+<td align="center"><font color="#808080"><b><i class="glyphicon glyphicon-dashboard"></i> å½“å‰æ—¶é—´</b></br><?php echo date("Y-m-d H:i:s")?> </font></td>
+<td align="center"><font color="#808080"><b><i class="	glyphicon glyphicon-heart-empty"></i> å®¢æœQQ</b></span></br><?php echo $conf['zzqq'];?></font></td>
+</tr>
+
+</tbody>
+</table>
+      </div>
+      
+      
+      <div class="panel panel-primary" style="border: 1px solid #42a5f5;">
+        <div class="panel-heading" style="background-color: #42a5f5;border: 1px solid #42a5f5;"><h3 class="panel-title" >å¿«æ·å¯¼èˆª</h3></div>
+        
+            <ul class="list-group">
+             <li class="list-group-item">  
+                <a href="http://pay.azheds.com/" class="btn btn-xs btn-primary">ä¸‰ç½‘é€šæ˜“æ”¯ä»˜å¹³å°</a>&nbsp;
+              
+            </li> 
+            <li class="list-group-item">  
+                <a href="../" class="btn btn-xs btn-primary">è¿”å›žç”¨æˆ·é¦–é¡µ</a>&nbsp;
+                <a href="./search.php" class="btn btn-xs btn-primary">å…¨å±€æœç´¢</a>&nbsp;
+                 <a href="./list.php" class="btn btn-xs btn-primary">è®¢å•ç®¡ç†</a>&nbsp;
+                   <a href="./kmlist.php" class="btn btn-xs btn-primary">å¡å¯†ç®¡ç†</a>&nbsp;
+            </li>
+            <li class="list-group-item">
+                <a href="blacklist.php" style="background-color: black;color:white;" class="btn btn-xs ">é»‘åå•ç®¡ç†</a>&nbsp;
+                <a href="loglist.php" style="background-color: black;color:white;" class="btn btn-xs ">ç³»ç»Ÿæ—¥å¿—</a>&nbsp;
+		 <a href="./other-set.php?act=view" class="btn btn-xs btn-success">ä¿®æ”¹é¦–é¡µæ¨¡æ¿</a>
+            
+            </li>
+            
+           
+           
+          </ul>
+     
+      </div>
+      
+      
+<div class="panel panel-info" style="float: none;">
+	<div class="panel-heading">
+		<h3 class="panel-title">ç½‘ç«™ä¿¡æ¯</h3>
+	</div>
+	<ul class="list-group">
+		<li class="list-group-item">
+			<b>å½“å‰ç½‘ç«™åç§°ï¼š</b><?php echo $conf['title'] ?>
+		</li>
+		<li class="list-group-item">
+			<b>å½“å‰ç½‘ç«™åŸŸåï¼š</b><?php echo $_SERVER['HTTP_HOST'] ?>
+		</li>
+		<li class="list-group-item">
+			<b>ç½‘ç«™å®¢æœQQï¼š</b><?php echo $conf['zzqq'] ?>
+		</li>
+		
+		<div class="alert alert-success">
+                              å½“å‰ç‰ˆæœ¬ï¼šV2.1<?=$version['version']?> (Build <?=$version['build']?>)
+                              <span class="badge btn btn-success" style="background-color: greenyellow;"><font color="black">å·²æ˜¯æœ€æ–°ç‰ˆæœ¬</font></span>
+		<li class="list-group-item">
+			ç¨‹åºä¿®å¤ï¼š<a href="https://wpa.qq.com/msgrd?v=3&uin=180423745&site=qq&menu=yes
+" style="color:green;">AZ</a></span>
+		</li>
+		<li class="list-group-item">
+			 å‘å¸ƒæ¸ é“ï¼š<a href="https://jq.qq.com/?_wv=1027&k=inSuS7m9" style="color:green;">AZphpäº¤æµç¾¤</a></span>
+		</li>
+		<li class="list-group-item"><span class="glyphicon glyphicon-magnet"></span> <b>ç³»ç»Ÿæç¤ºï¼š</b>
+			    <?php 
+			         if(empty($conf['epay_id']) ||$conf['epay_key'] == ""){
+			             echo "<font style='color:red;'>æ‚¨è¿˜æœªé…ç½®æ”¯ä»˜æŽ¥å£ï¼Œç”¨æˆ·æ— æ³•ä½¿ç”¨æ‚¨çš„å‘å¡ç½‘ï¼è¯·å°½å¿«é…ç½®ï¼</font>";
+			         }elseif(!empty($conf['xq_id'])){
+			             $data=get_curl($payapi.'api.php?act=query&pid='.$conf['epay_id'].'&key='.$conf['epay_key'].'&url='.$_SERVER['HTTP_HOST']);
+			             $arr=json_decode($data,true);
+			             if(empty($arr['account']) || $arr['account'] == null){
+			                 echo "<font style='color:red;'>æ‚¨è¿˜æœªé…ç½®æ”¯ä»˜æŽ¥å£æçŽ°è´¦å·ï¼è¯·å°½å¿«é…ç½®ï¼</font>";
+			             }else{
+			                 echo "<font style='color:red;'>è¯·å‹¿ç”¨ä½œè¿æ³•è¿è§„ï¼Œå­¦ä¹ ä½¿ç”¨è°¢è°¢ï¼</font>";
+			             }
+			         }else{
+			             echo "<font style='color:red;'>è¯·å‹¿ç”¨ä½œè¿æ³•è¿è§„ï¼Œå­¦ä¹ ä½¿ç”¨è°¢è°¢ï¼</font>";
+			         }
+			     ?>
+			
+			</li>
+	</ul>
+</div>
+    </div>
+  </div>

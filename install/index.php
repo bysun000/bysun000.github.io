@@ -1,7 +1,9 @@
 <?php
 error_reporting(0);
 
+
 @header('Content-Type: text/html; charset=UTF-8');
+
 $do=isset($_GET['do'])?$_GET['do']:'0';
 if(file_exists('install.lock')){
 	$installed=true;
@@ -39,7 +41,7 @@ function checkclass($f,$m = false) {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,minimal-ui">
-<title>安装程序 - 自动发卡系统</title>
+<title>安装程序 - AZ个人发卡系统V6.0</title>
 <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 
 </head>
@@ -47,7 +49,7 @@ function checkclass($f,$m = false) {
 <nav class="navbar navbar-fixed-top navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <span class="navbar-brand">自动发卡系统</span>
+        <span class="navbar-brand">AZ个人发卡系统V6.0</span>
       </div>
     </div>
   </nav>
@@ -60,7 +62,7 @@ function checkclass($f,$m = false) {
 		<h3 class="panel-title" align="center">安装说明</h3>
 	</div>
 	<div class="panel-body">
-		<p><iframe src="http://www.huluxia.com/" frameBorder="0" width="100%" scrolling="yes" height="218"></iframe></p>
+		<p><iframe src="anzhuang.txt" style="width:100%;height:465px;"></iframe></p>
 		<?php if($installed){ ?>
 		<div class="alert alert-warning">您已经安装过，如需重新安装请删除<font color=red> install/install.lock </font>文件后再安装！</div>
 		<?php }else{?>
@@ -177,10 +179,10 @@ if(defined("SAE_ACCESSKEY") || $_GET['jump']==1){
 				echo '<div class="alert alert-warning">连接数据库失败，['.DB::connect_errno().']'.DB::connect_error().'</div>';
 		}else{
 			echo '<div class="alert alert-success">数据库配置文件保存成功！</div>';
-			if(DB::query("select * from shua_config where 1")==FALSE)
+			if(DB::query("select * from if_config where 1")==FALSE)
 				echo '<p align="right"><a class="btn btn-primary btn-block" href="?do=4">创建数据表>></a></p>';
 			else
-				echo '<div class="list-group-item list-group-item-info">系统检测到你已安装过新影自动发卡系统</div>
+				echo '<div class="list-group-item list-group-item-info">系统检测到你已安装过阿洋个人发卡平台</div>
 				<div class="list-group-item">
 					<a href="?do=6" class="btn btn-block btn-info">跳过安装</a>
 				</div>
@@ -223,7 +225,7 @@ if(defined("SAE_ACCESSKEY") || $_GET['jump']==1){
 			if(DB::query("select * from shua_config where 1")==FALSE)
 				echo '<p align="right"><a class="btn btn-primary btn-block" href="?do=4">创建数据表>></a></p>';
 			else
-				echo '<div class="list-group-item list-group-item-info">系统检测到你已安装过新影自动发卡系统</div>
+				echo '<div class="list-group-item list-group-item-info">系统检测到你已安装过AZ个人发卡平台</div>
 				<div class="list-group-item">
 					<a href="?do=6" class="btn btn-block btn-info">跳过安装</a>
 				</div>
@@ -294,7 +296,7 @@ if($e==0) {
 	<div class="panel-body">
 <?php
 	@file_put_contents("install.lock",'安装锁');
-	echo '<div class="alert alert-info"><font color="green">安装完成！管理账号和密码是:admin/admin</font><br/><br/><a href="../">>>网站首页</a>｜<a href="../admin/">>>后台管理</a><hr/>更多设置选项请登录后台管理进行修改。<br/><br/><font color="#FF0033">如果你的空间不支持本地文件读写，请自行在install/ 目录建立 install.lock 文件！</font></div>';
+	echo '<div class="alert alert-info"><font color="green">安装完成！管理账号和密码是:admin/123456</font><br/><br/><a href="../">>>网站首页</a>｜<a href="../admin/">>>后台管理</a><hr/>更多设置选项请登录后台管理进行修改。<br/><br/><font color="#FF0033">如果你的空间不支持本地文件读写，请自行在install/ 目录建立 install.lock 文件！</font></div>';
 ?>
 	</div>
 </div>
@@ -312,7 +314,7 @@ if($e==0) {
 	<div class="panel-body">
 <?php
 	@file_put_contents("install.lock",'安装锁');
-	echo '<div class="alert alert-info"><font color="green">安装完成！管理账号和密码是:admin/admin</font><br/><br/><a href="../">>>网站首页</a>｜<a href="../admin/">>>后台管理</a><hr/>更多设置选项请登录后台管理进行修改。<br/><br/><font color="#FF0033">如果你的空间不支持本地文件读写，请自行在install/ 目录建立 install.lock 文件！</font></div>';
+	echo '<div class="alert alert-info"><font color="green">安装完成！管理账号和密码是:admin/if77.cn</font><br/><br/><a href="../">>>网站首页</a>｜<a href="../admin/">>>后台管理</a><hr/>更多设置选项请登录后台管理进行修改。<br/><br/><font color="#FF0033">如果你的空间不支持本地文件读写，请自行在install/ 目录建立 install.lock 文件！</font></div>';
 ?>
 	</div>
 </div>

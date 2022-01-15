@@ -1,39 +1,213 @@
 <?php
 
-$title='订单管理';
-include './head.php';
-$sql = "select * from ayangw_order order by id DESC";
-$res = $DB->query($sql);
+include 'head.php';
+$today=date("Y-m-d ").'00:00:00';
 
-//数组实现分页
-$temp= "";
-$i = 1;
-$arr = array();
-while ($row = $DB->fetch($res)){
-    $temp .="<tr><td>{$row['id']}</td> <td>".ch($row['trade_no'])."<br>{$row['out_trade_no']}<br></td>  <td>".getName($row['gid'],$DB)."</td>
-    <td>".getPayType($row['type'])."<br>￥{$row['money']}</td> <td>{$row['rel']}</td>
-    <td>{$row['benTime']}<br>".ch($row['endTime'])."</td> <td>".zt($row['sta'])."</td> <td><span id='{$row['id']}' class='btn btn-xs btn-primary btndel'>删除</span></td></tr>";
-    if($i==10){
-    array_push($arr,$temp);
-    $temp = "";
-    $i =0;
-    }
-    $i++;
-    }
-    if($temp != ""){
-    array_push($arr,$temp);
+?>
+
+
+  <div class="container" style="padding-top:70px;">
+    <div class="col-sm-12 col-md-10 center-block" style="float: none;">
+<?php 
+
+	$numrows=$DB->count("SELECT count(*) from if_order");
+	$todaynumrows= $DB->count("select COUNT(id)
+from if_order
+where benTime > '$today' ");
+        $todayoknumrows = $DB->count("select sum(money)
+from if_order
+where benTime > '$today' and sta = 1");
+        $allokp = $DB->count("select sum(money) from if_order where sta = 1");
+        $aliokp = $DB->count("select sum(money) from if_order where benTime > '$today' and sta = 1 and type = 'alipay'");
+        $wxokp = $DB->count("select sum(money) from if_order where benTime > '$today' and sta = 1 and type = 'wxpay'");
+        $qqokp = $DB->count("select sum(money) from if_order where benTime > '$today' and sta = 1 and (type = 'qqpay' or type = 'tenpay')");
+	$sql=" 1";
+
+?>
+      <div class="table-responsive">
+       <table class="table table-bordered">
+      <tbody>
+<tr height="25">
+    <td align="center"><font color="#808080">
+        <b><span class="glyphicon glyphicon-flag"></span> 当前订单总数</b>
+        </br><?php echo  $numrows;?></font></td>
+<td align="center">
+    <font color="#808080"><b>
+      
+            <span class="glyphicon glyphicon-plus-sign"></span> 今日总订单</b>
+            <br><?=$todaynumrows?>
+            </font></td>
+ <td align="center"><font color="#808080">
+        <b><span class="glyphicon glyphicon-leaf"></span> 总成交金额</b>
+        </br><?php echo sprintf("%.2f", $allokp);?>￥</font></td>
+
+<td align="center">
+    <font color="#808080"><b>
+             
+            
+                <?php
+                if(!empty($_GET['act']) && $_GET['act'] != null && $_GET['act'] == "sousuo"){
+                      echo '<a class="btn btn-info" href="list.php"><span class="glyphicon glyphicon-search" ></span> 全部订单</a> ';
+                
+                }else{
+                      echo '<a class="btn btn-info"  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-search" ></span> 搜索</a> ';
+                }
+                
+                ?>
+      
+               
+                
+                </font></td>
+    
+</tr>
+
+<tr height="25">
+    <td align="center">
+    <font color="#808080"><b>
+      
+            <span class="glyphicon glyphicon-ok"></span> 今日成交</b>
+            <br><?=sprintf("%.2f", $todayoknumrows); ?>
+            </font></td>
+   
+<td align="center">
+    <font color="#808080"><b>
+      
+            <span class="	glyphicon glyphicon-retweet"></span> 支付宝</b>
+            <br><?=sprintf("%.2f", $aliokp);?>￥
+            </font></td>
+<td align="center">
+    <font color="#808080"><b>
+      
+            <span class="	glyphicon glyphicon-retweet"></span> 微信</b>
+            <br><?=sprintf("%.2f", $wxokp);?>￥
+            </font></td>
+<td align="center">
+    <font color="#808080"><b>
+              <span class="	glyphicon glyphicon-retweet"></span> QQ</b>
+            <br><?=sprintf("%.2f", $qqokp);?> ￥ 
+                </font></td>
+</tr>
+</tbody></table>
+      
+        <table class="table table-striped">
+          <thead><tr>
+                  <th>订单编号/商户订单编号</th>
+                  <th>商品名称</th>
+                  <th>联系方式</th>
+                  <th>成交时间</th>
+                  <th>购买数量</th>
+                  <th>交易金额</th>
+                  <th>交易状态</th>
+              </tr>
+          </thead>
+          <tbody>
+<?php
+$pagesize=30;
+$pages=intval($numrows/$pagesize);
+if ($numrows%$pagesize)
+{
+ $pages++;
+ }
+if (isset($_GET['page'])){
+$page=intval($_GET['page']);
 }
-function ch($t){
-    if($t == "" || $t ==null){
-        return "<font >无</font>";
-    }else{
-        return $t;
-    }
+else{
+$page=1;
+}
+$offset=$pagesize*($page - 1);
 
+if(!empty($_GET['act']) && $_GET['act'] != null && $_GET['act'] == "sousuo"){
+    $pz = $_POST['pz'];
+    $sql = "SELECT * FROM if_order WHERE  out_trade_no like '%$pz%' or trade_no like '%$pz%' or rel  like '%$pz%'   order by id desc ";
+}else{
+    $sql = "SELECT * FROM if_order WHERE{$sql} order by id desc limit $offset,$pagesize";
+    // echo $sql;
 }
 
+$rs=$DB->query($sql);
+while($res = $DB->fetch($rs))
+{
+echo '<tr><td>'.$res['out_trade_no'].'<br>'.$res['trade_no'].'</td>'
+        . '<td>'.getName($res['gid'],$DB).'</td><td>'.$res['rel'].'</td>'
+        . '<td>'.$res['endTime'].'</td><td>'.$res['number'].'</td><td>￥'.$res['money'].'('.getPayType($res['type']).')'.'</td><td>'.zt($res['sta']).'</td>';
+}
+?>
+          </tbody>
+        </table>
+      </div>
+<?php
+echo'<ul class="pagination">';
+$first=1;
+$prev=$page-1;
+$next=$page+1;
+$last=$pages;
+if ($page>1)
+{
+echo '<li><a href="?page='.$first.$link.'">首页</a></li>';
+echo '<li><a href="?page='.$prev.$link.'">&laquo;</a></li>';
+} else {
+echo '<li class="disabled"><a>首页</a></li>';
+echo '<li class="disabled"><a>&laquo;</a></li>';
+}
+for ($i=1;$i<$page;$i++)
+echo '<li><a href="?page='.$i.$link.'">'.$i .'</a></li>';
+echo '<li class="disabled"><a>'.$page.'</a></li>';
+for ($i=$page+1;$i<=$pages;$i++)
+echo '<li><a href="?page='.$i.$link.'">'.$i .'</a></li>';
+echo '';
+if ($page<$pages)
+{
+echo '<li><a href="?page='.$next.$link.'">&raquo;</a></li>';
+echo '<li><a href="?page='.$last.$link.'">尾页</a></li>';
+} else {
+echo '<li class="disabled"><a>&raquo;</a></li>';
+echo '<li class="disabled"><a>尾页</a></li>';
+}
+echo'</ul>';
+#分页
+?>
+    </div>
+  </div>
+  
+
+  <!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form action="?act=sousuo" method="POST">	
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" 
+						aria-hidden="true">×
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					搜索记录
+				</h4>
+			</div>
+			<div class="modal-body">
+                           
+                            <input type="text" class="form-control" name="pz" placeholder="订单编号/商户订单编号/联系方式！">
+                                
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" 
+						data-dismiss="modal">关闭
+				</button>
+                            <button type="submit" class="btn btn-primary">
+					立即搜索
+				</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+      </form>
+
+</div><!-- /.modal -->
+
+<script>
+
+</script>
+<?php
 function getName($id,$DB){
-    $sql = "select * from ayangw_goods where id =".$id;
+    $sql = "select * from if_goods where id =".$id;
     $res = $DB->query($sql);
     $row = $DB->fetch($res);
     return $row['gName'];
@@ -53,72 +227,11 @@ function getPayType($str){
         return "微信";
     }
 }
-
 function zt($z){
     if($z == 0){
         return "<font color='red'>未完成</font>";
     }else if($z == 1){
-        return "<font>已完成</font>";
+        return "<font color=green>已完成</font>";
     }
 }
 ?>
- <script type="text/javascript">
-    if($.cookie("user") == null || $.cookie("user") == "" || $.cookie("loginInfo") != $.md5($.cookie("pass"))){
-    	window.location.href='./login.php';
-    }else{
-
-    }
-    </script>
-<div class="container"  style="padding-top:70px;">
-<div class="list-group">
-			<div class="list-group-item list-group-item-info text-center"><h3>订单列表</h3></div>
-			<div class="list-group-item list-group-item-info text-center">
-			<button type="button" class="btn btn-danger" id="det_allOder">删除所有订单信息</button>
-			<button type="button" class="btn btn-warning" id="det_wOder">删除未交易成功的订单</button>
-			</div>
-			<div class="list-group-item list-group-item-success">
-				
-			<table class="table  table-hover text-center mytab" width="100%";style="text-align: center; ">
-			 <tr  class="mytr" id="mytr_title">
-			     <td>订单ID</td><td>交易号/<br>商户订单号</td><td>商品名称</td><td>支付类型/<br>价格</td><td>联系方式</td><td>创建时间/<br>完成时间</td><td>交易状态</td><td>操作</td>
-			 </tr>
-			 <?php
-			 $page = 1;
-			 if(count($arr)>0){
-			 if(!empty($_GET['page'])){
-			     $page = $_GET['page'];
-			 }
-			 echo $arr[($page-1)];
-			 }
-			 ?>
-			</table>
-            <?php 
-            
-            
-            
-            echo "<ul class='pagination'>";
-            if(count($arr)>1){
-                if($page != 1){
-                echo "<li><a href='list.php?page=1'>首页</a></li>";
-                echo "<li><a href='list.php?page=".($page-1)."'>上一页</a></li>";
-                }
-                if($page != count($arr)){
-                echo "<li><a href='list.php?page=".($page+1)."'>下一页</a></li>";
-                echo "<li><a href='list.php?page=".count($arr)."'>末页</a></li>";
-                }
-                echo "<li><div class='input-group' style='max-width:150px; float:left;'>
-			<input type='text' id='txt_page' class='form-control' placeholder='总".count($arr)."页'>
-			<span id='but_page' title='list.php' alt='".count($arr)."' class='input-group-addon' style='cursor:pointer'>跳转到</span>
-		</div></li>";
-                echo "</ul>";
-                
-            }
-          
-            ?>
-			</div>
-		</div>
-		</div>
-      
- 
-    </div>
-  </div>

@@ -150,9 +150,9 @@ show_Qrcode = function (data) {
     }
     if (data.qrcode)$("#show_qrcode").attr("src", data.qrcode); //二维码更新
     if (data.money) $("#money").html('￥' + data.money); //金额改变 云端匹配最佳金额
-    var tps=data.money!=data.price?'<span style="color:red">为了您及时到账 请务必付款'+data.money+'元</span><br>':'';
+    var tps = data.money != data.price ? '<span style="color:red">为了您及时到账 请务必付款' + data.money + '元</span><br>' : '';
     if (data.message) { //创建后云端根据浏览器返回的tps提醒
-        tps=data.message;
+        tps = data.message;
         //$("#msg h1").html(data.message);
     } else if (data.mobile) {
         if ((data["type"] == 3 && ua.indexOf('micromessenger') > 1) || (data["type"] == 2 && ua.indexOf('qq') > 1)) {
@@ -162,7 +162,7 @@ show_Qrcode = function (data) {
         }
         // $("#msg h1").html(tps); //手机支付
     } else {
-        tps+=tps?'':'付款后自动到账 未到账可联系我们';
+        tps += tps ? '' : '付款后自动到账 未到账可联系我们';
         // $("#msg h1").html('付款后自动到账 未到账可联系我们');
     }
     $("#msg h1").html(tps);
@@ -182,7 +182,7 @@ show_desc = function (data) { //商品描述
     $("#desc").html(html);
 }
 getApiHost = function (data) {
-    if (data && data.https) {
+    if ((data && data.https) || 'https:' == document.location.protocol) { //走HTTPS通道
         return 'https://codepay.fateqq.com:51888'
     } else {
         return 'http://codepay.fateqq.com:52888'
@@ -232,7 +232,7 @@ function startNotiry(data) {
         openUrl += openUrl.indexOf('?') > 1 ? "&" + query : "?" + query;
         setTimeout(function () {
             location.href = openUrl;
-        },1000); //延时1秒跳转
+        }, 1000); //延时1秒跳转
 
     });
     notify.on('disconnect', function (o) {//服务器断开 无法通知
@@ -242,7 +242,7 @@ function startNotiry(data) {
         if (o.msg)$("#msg h1").html(o.msg);
     });
 }
-$(document).ready(function(){
+$(document).ready(function () {
     $(function () {
         timer(user_data.outTime || 360);
     });

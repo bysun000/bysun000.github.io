@@ -1,6 +1,12 @@
 <?php
-include '../ayangw/common.php';
+
+include '../if/common.php';
 @header('Content-Type: application/json; charset=UTF-8');
+if ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
+
+} else {
+    exit( "页面非法请求！");
+}
 if(empty($_GET['act'])){
     exit("非法访问！");
 }else{
@@ -10,19 +16,24 @@ if(empty($_GET['act'])){
 switch ($act){
     //验证登陆
     case 'checkLogin':
-        $user = $_POST['user'];
-        $pass = $_POST['pass']; 
-       
-        if($user == $conf['admin'] && $pass == $conf['pwd']){
+        $user = _if($_POST['user']);
+        $pass = daddslashes($_POST['pass']); 
+        $pass = md5($pass.$password_hash);
+        if($user == $conf['admin'] &&  $pass== $conf['pwd']){
+            wsyslog("登陆后台成功!","登陆IP:".real_ip().",城市:".get_ip_city());
+            $session=md5($user.$pass.$password_hash);
+            $token=authcode("{$user}\t{$session}", 'ENCODE', SYS_KEY);
+            setcookie("admin_token", $token, time() + 604800);
             exit('{"code":1,"msg":"登陆成功"}');
         }else{
+            wsyslog("登陆后台失败!","登陆IP:".real_ip().",城市:".get_ip_city()."　|　用户名:".$user.",密码:".$_POST['pass']);
             exit('{"code":0,"msg":"用户名或密码错误"}');
         }
         ;break;
         //删除订单
     case 'delOrd': 
-        $id = $_POST['id'];
-        $sql = "delete from ayangw_order where id = ".$id;
+        $id = _if($_POST['id']);
+        $sql = "delete from if_order where id = ".$id;
         $b = $DB->query($sql);
         if($b > 0){
             exit('{"code":1,"msg":"删除成功"}');
@@ -32,8 +43,8 @@ switch ($act){
         ;break;
        //删除卡密
     case 'delKm': 
-            $id = $_POST['id'];
-            $sql = "delete from ayangw_km where id = ".$id;
+            $id = _if($_POST['id']);
+            $sql = "delete from if_km where id = ".$id;
             $b = $DB->query($sql);
             if($b > 0){
                 exit('{"code":1,"msg":"删除成功"}');
@@ -43,11 +54,11 @@ switch ($act){
             ;break;
             //删除商品
      case 'delSp':
-                $id = $_POST['id'];
-                $sql = "delete from ayangw_goods where id = ".$id;
+                $id = _if($_POST['id']);
+                $sql = "delete from if_goods where id = ".$id;
                 $b = $DB->query($sql);
                 if($b > 0){
-                    $sql = "delete from ayangw_km where gid = ".$id;
+                    $sql = "delete from if_km where gid = ".$id;
                    $DB->query($sql);
                     exit('{"code":1,"msg":"删除成功"}');
                 }else{
@@ -55,12 +66,12 @@ switch ($act){
                 }
                 ;break;
      case 'addSp':
-                $tpId = $_POST['tid'];
-                $gName = $_POST['gName'];
-                $price = $_POST['price'];
-                $state = $_POST['state'];
-                $gInfo = $_POST['gInfo'];
-                $sql = "insert into ayangw_goods(gName,gInfo,tpId,price,state) values('{$gName}','$gInfo',{$tpId},{$price},{$state})";
+                $tpId = _if($_POST['tid']);
+                $gName = daddslashes($_POST['gName']);
+                $price = _if($_POST['price']);
+                $state = _if($_POST['state']);
+                $gInfo = daddslashes($_POST['gInfo']);
+                $sql = "insert into if_goods(gName,gInfo,tpId,price,state) values('{$gName}','$gInfo',{$tpId},{$price},{$state})";
                 $b = $DB->query($sql);
                
                 if($b > 0){
@@ -70,13 +81,13 @@ switch ($act){
                 }
                ;break;
    case 'delType':
-       $id = $_POST['tid'];
-       $sql = "select * from ayangw_goods where tpid = ".$id;
+       $id = _if($_POST['tid']);
+       $sql = "select * from if_goods where tpid = ".$id;
        $res = $DB->query($sql);
        if($row = $DB->fetch($res)){
            exit('{"code":-1,"msg":"该分类下面还有商品！请先删除商品后再删除分类！"}');
        }
-       $sql = "delete from ayangw_type where id =".$id;
+       $sql = "delete from if_type where id =".$id;
        $b =  $DB->query($sql);
        if($b > 0){
            exit('{"code":1,"msg":"删除成功"}');
@@ -85,8 +96,8 @@ switch ($act){
        }
        ;break;    
    case 'AddType':
-       $tName = $_POST['tName'];
-       $sql = "insert into ayangw_type(tName) values('".$tName."')";
+       $tName = daddslashes($_POST['tName']);
+       $sql = "insert into if_type(tName) values('".$tName."')";
        $b =  $DB->query($sql);
        if($b > 0){
            exit('{"code":1,"msg":"添加成功"}');
@@ -98,27 +109,30 @@ switch ($act){
        $i = 0;
        foreach ($_POST as $k => $value) {
            $value=daddslashes($value);
-           $DB->query("insert into ayangw_config set `ayangw_k`='{$k}',`ayangw_v`='{$value}' on duplicate key update `ayangw_v`='{$value}'");
+           $DB->query("insert into if_config set `if_k`='{$k}',`if_v`='{$value}' on duplicate key update `if_v`='{$value}'");
        }
-       /*$sql = "update ayangw_web set web_name = '{$n}',web_title = '{$t}',web_keywords = '{$k}',web_notice = '{$nt}',web_url = '{$u}',web_qq = '{$q}' where web_admin = '{$a}'";
-       $b = $DB->query($sql);*/
+      
        if(1 > 0){
+           wsyslog("修改网站信息成功!","IP:".real_ip().",城市:".get_ip_city());
            exit('{"code":1,"msg":"修改成功"}');
        }else{
+           wsyslog("修改网站信息失败!","IP:".real_ip().",城市:".get_ip_city());
            exit('{"code":-1,"msg":"修改失败"}');
        }
        ;break;
        
-   case 'uppay':
+   case 'upEpay':
         $i = 0;
        foreach ($_POST as $k => $value) {
            $i++;
            $value=daddslashes($value);
-           $DB->query("insert into ayangw_config set `ayangw_k`='{$k}',`ayangw_v`='{$value}' on duplicate key update `ayangw_v`='{$value}'");
+           $DB->query("insert into if_config set `if_k`='{$k}',`if_v`='{$value}' on duplicate key update `if_v`='{$value}'");
        }
        if($i > 0){
+           wsyslog("修改商户信息成功!","IP:".real_ip().",城市:".get_ip_city());
            exit('{"code":1,"msg":"修改成功"}');
        }else{
+           wsyslog("修改商户信息失败!","IP:".real_ip().",城市:".get_ip_city());
            exit('{"code":-1,"msg":"修改失败"}');
        }
        ;break;
@@ -127,7 +141,7 @@ switch ($act){
        foreach ($_POST as $k => $value) {
            $i++;
            $value=daddslashes($value);
-           $DB->query("insert into ayangw_config set `ayangw_k`='{$k}',`ayangw_v`='{$value}' on duplicate key update `ayangw_v`='{$value}'");
+           $DB->query("insert into if_config set `if_k`='{$k}',`if_v`='{$value}' on duplicate key update `if_v`='{$value}'");
        }
        if($i > 0){
            exit('{"code":1,"msg":"修改成功"}');
@@ -137,17 +151,19 @@ switch ($act){
        ;break;
   
    case 'upAdmin':
-       $u= $_POST['u'];//用户名
-       $p = $_POST['p'];//密码
-       $b = $DB->query("update `ayangw_config` set `ayangw_v` ='{$p}' where `ayangw_k`='pwd'");
+       $u= _if($_POST['u']);//用户名
+       $p = _if($_POST['p']);//密码
+       $b = $DB->query("update `if_config` set `if_v` ='{$p}' where `if_k`='pwd'");
        if($b > 0){
+           wsyslog("修改账号密码成功!","IP:".real_ip().",城市:".get_ip_city());
            exit('{"code":1,"msg":"修改成功"}');
        }else{
+           wsyslog("修改账号密码失败!","IP:".real_ip().",城市:".get_ip_city());
            exit('{"code":-1,"msg":"修改失败"}');
        }
        ;break;
    case 'det_allkm':
-       $sql = "delete from ayangw_km";
+       $sql = "delete from if_km";
        $b =  $DB->query($sql);
        if($b > 0){
            exit('{"code":1,"msg":"删除成功"}');
@@ -156,7 +172,7 @@ switch ($act){
        }
        ;break;
    case 'det_ykm':
-       $sql = "delete from ayangw_km where stat = 1";
+       $sql = "delete from if_km where stat = 1";
        $b = $DB->query($sql);
        if($b > 0){
            exit('{"code":1,"msg":"删除成功"}');
@@ -165,7 +181,7 @@ switch ($act){
        }
        ;break;
    case 'det_allOder':
-       $sql = "delete from ayangw_order";
+       $sql = "delete from if_order";
        $b =  $DB->query($sql);
        if($b > 0){
            exit('{"code":1,"msg":"删除成功"}');
@@ -174,17 +190,10 @@ switch ($act){
        }
        ;break;
    case 'c':
-           $url = $http."?host=".$_SERVER['HTTP_HOST']."&type=".TYPE;
-           $sc = get_curl($url);
-           $obj=(array)json_decode($sc);
-           if($obj['code'] == -1){
-               exit('{"code":-1}');
-           }else{
-               exit('{"code":1}');
-           }
+           exit('{"code":1}');
            ;break;
    case 'det_wOder':
-           $sql = "delete from ayangw_order where sta = 0";
+           $sql = "delete from if_order where sta = 0";
            $b =  $DB->query($sql);
            if($b > 0){
                exit('{"code":1,"msg":"删除成功"}');
@@ -192,6 +201,15 @@ switch ($act){
                exit('{"code":-1,"msg":"删除失败"}');
            }
            ;break;
+    case 'detlog':
+               $sql = "delete from if_syslog";
+               $b =  $DB->query($sql);
+               if($b > 0){
+                   exit('{"code":1,"msg":"删除成功"}');
+               }else{
+                   exit('{"code":-1,"msg":"删除失败"}');
+               }
+               ;break;
     default:;break;
 }
 
