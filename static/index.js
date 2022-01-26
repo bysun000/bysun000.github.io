@@ -352,7 +352,7 @@
         SubmitResults();
         if (score <= 49) return '变成光守护嘉然捏🤤';
         if (score <= 99) return '然然🤤我的然然🥵🥵';
-        if (score <= 149) return '纯路人🥰';
+        if (score <= 149) return '是纯路人捏🥰';
         if (score <= 199) return '关注嘉然，顿顿解馋';
         return '是纯嘉心糖捏🤗';
     }
@@ -391,7 +391,7 @@
     w.initSetting = function() {
         document.getElementById("username").value = cookie("username") ? cookie("username") : "";
         document.getElementById("message").value = cookie("message") ? cookie("message") : "";
-        document.getElementsByTagName("title")[0].innerText = cookie("title") ? cookie("title") : "吃掉小鹿乃";
+        document.getElementsByTagName("title")[0].innerText = cookie("title") ? cookie("title") : "守护嘉然";
         if (cookie("keyboard")) {
             document.getElementById("keyboard").value = cookie("keyboard");
             map = {}
