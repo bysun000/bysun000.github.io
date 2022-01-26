@@ -448,7 +448,7 @@
 
         let fakeEvent = {
             clientX: ((index - 1) * blockSize + index * blockSize) / 2 + body.offsetLeft,
-            // Make sure that it is in the area
+            // Make sure that it is in the area awa
             clientY: (touchArea[0] + touchArea[1]) / 2,
             target: document.getElementById(id),
         };
